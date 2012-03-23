@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html data-require="math math-format">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Multiplying Matrices</title>
+	<script src="../khan-exercise.js"></script>
+	<script src="../utils/graphie-geometry.js"></script>
+</head>
+<body>
+	<div class="exercise">
+	<div class="vars">
+		<var id="V1">randRange(-8, 8, 2)</var>
+		<var id="V2">randRange(-8, 8, 2)</var>
+		<var id="R1">randRange(-8, 8, 2)</var>
+		<var id="R2">randRange(-8, 8, 2)</var>
+		<var id="SOLROW">randRange(1,2)</var>
+		<var id="SOLCOL">randRange(1,2)</var>
+	</div>
+
+	<div class="problems">
+		<div>
+			<div class="question">
+				<p>If
+					<code>
+					A = \begin{bmatrix}
+					<var>V1[0]</var> & <var>V1[1]</var> \\
+					<var>V2[0]</var> & <var>V2[1]</var>
+					\end{bmatrix}.
+					\begin{bmatrix}
+					<var>R1[0]</var> & <var>R2[0]</var> \\
+					<var>R1[1]</var> & <var>R2[1]</var>
+					\end{bmatrix}
+					</code>, find <code>A_{<var>SOLROW</var><var>SOLCOL</var>}</code>.
+				</p>
+			</div>
+			<div class="solution"><var>dotProduct([V1, V2][SOLROW - 1], [R1, R2][SOLCOL - 1])</var></div>
+		</div>
+	</div>
+	<div class="hints">
+	</div>
+	</div>
+</body>
+</html>
